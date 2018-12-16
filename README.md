@@ -1,4 +1,4 @@
-# ui_challenge_1
+# UI Challenge 1
 
 A new Flutter project.
 
