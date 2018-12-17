@@ -43,6 +43,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     int _currentIndex = 0;
+    final List<Widget> _children = [
+    ];
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       currentIndex: _currentIndex, //this will be set when tab is tapped
@@ -52,6 +54,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
           _currentIndex = index;
           print('current index ' + _currentIndex.toString());
         });
+        if (_currentIndex == 0) {
+            Navigator.pop(context); 
+        }
+        
       },
       items: [
         BottomNavigationBarItem(
