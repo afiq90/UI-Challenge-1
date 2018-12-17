@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       'Explore',
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold ),
                       textAlign: TextAlign.left,
                     ))
               ],

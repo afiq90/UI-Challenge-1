@@ -123,6 +123,7 @@ class _MainContentState extends State<MainContent> {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      scrollDirection: Axis.vertical,
       children: <Widget>[
         Row(
           children: <Widget>[
