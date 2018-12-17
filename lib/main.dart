@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'movie.dart';
+import 'trending.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,8 +23,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'UI Challenge 1'),
-      routes: <String, WidgetBuilder> {
-        "Home": (BuildContext context) => new Movie()
+      routes: <String, WidgetBuilder>{
+        "Movie": (BuildContext context) => new Movie(),
+        "Trending": (BuildContext context) => new Trending()
       },
     );
   }
@@ -217,13 +219,19 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Expanded(
-              child: Text(
-                'View All',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green),
-                textAlign: TextAlign.right,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('Trending');
+                  print('object');
+                 },
+                child: Text(
+                  'View All',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green),
+                  textAlign: TextAlign.right,
+                ),
               ),
             ),
           ],
@@ -423,7 +431,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Expanded(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed("Home");
+                    Navigator.of(context).pushNamed("Movie");
                     print('object has been tapped');
                   },
                   child: Container(
@@ -452,8 +460,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ],
-
-        // ),
       ),
     );
   }
