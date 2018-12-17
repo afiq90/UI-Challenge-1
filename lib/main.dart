@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'movie.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'UI Challenge 1'),
       routes: <String, WidgetBuilder> {
-        "Home": (BuildContext context) => new Home()
+        "Home": (BuildContext context) => new Movie()
       },
     );
   }
