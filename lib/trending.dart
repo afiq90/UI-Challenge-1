@@ -49,7 +49,7 @@ class _MovieContentState extends State<MovieContent> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(left: 10, top: 50),
+              padding: const EdgeInsets.only(left: 10, top: 20),
               child: Column(
                 children: <Widget>[
                   Text(

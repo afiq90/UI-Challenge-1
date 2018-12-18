@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       'Explore',
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold ),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.left,
                     ))
               ],
@@ -219,18 +219,24 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushNamed('Trending');
-                  print('object');
-                 },
-                child: Text(
-                  'View All',
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green),
-                  textAlign: TextAlign.right,
+              child: Container(
+                alignment: Alignment.topRight,
+                // padding: EdgeInsets.symmetric(horizontal: 40),
+                // padding: EdgeInsets.only(left: 10),
+                // color: Colors.black,
+                child: FlatButton(
+                  // textColor: Colors.red,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('Trending');
+                  },
+                  child: Text(
+                    'View All',
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                    // textAlign: TextAlign.right,
+                  ),
                 ),
               ),
             ),
