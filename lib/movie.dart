@@ -53,7 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           print('current index ' + _currentIndex.toString());
         });
         if (_currentIndex == 0) {
-            Navigator.pop(context); 
+          Navigator.pop(context);
         }
       },
       items: [
@@ -153,8 +153,11 @@ class _MainContentState extends State<MainContent> {
           children: <Widget>[
             ClipRRect(
               borderRadius: new BorderRadius.circular(25.0),
-              child: Image.asset(
-                'images/hotel_transylvania3.jpg',
+              child: Hero(
+                tag: 'imageHero',
+                child: Image.asset(
+                  'images/hotel_transylvania3.jpg',
+                ),
               ),
             ),
           ],

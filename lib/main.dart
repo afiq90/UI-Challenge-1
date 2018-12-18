@@ -440,25 +440,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.of(context).pushNamed("Movie");
                     print('object has been tapped');
                   },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 110),
-                    // margin: const EdgeInsets.symmetric(horizontal: 10),
-                    height: 130,
-                    decoration: BoxDecoration(
-                      // shape: BoxShape.circle,
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.black,
-                      image: DecorationImage(
-                        image: ExactAssetImage('images/travis.jpg'),
+                  child: Hero(
+                    tag: 'imageHero',
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 110),
+                      // margin: const EdgeInsets.symmetric(horizontal: 10),
+                      height: 130,
+                      decoration: BoxDecoration(
+                        // shape: BoxShape.circle,
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black,
+                        image: DecorationImage(
+                          image: ExactAssetImage('images/travis.jpg'),
+                        ),
                       ),
-                    ),
-                    child: Text(
-                      'Hotel Transylvania 3',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: Colors.white),
+                      child: Text(
+                        'Hotel Transylvania 3',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
